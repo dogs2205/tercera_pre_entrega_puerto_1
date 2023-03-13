@@ -4,4 +4,9 @@
 
 {% block main %} 
 <h1> Hola esto es un template</h1>
+<ul>
+    {% for alimen in alimento%} 
+    <li>{{alimen.id}}-{{alimen.origen_alimento}} </li>
+    {% endfor %} 
+</ul>
 {% endblock %}

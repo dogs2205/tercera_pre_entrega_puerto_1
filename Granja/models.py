@@ -16,6 +16,14 @@ class Alimento(models.Model):
 
 def __str__(self):
         return f"{self.id} - {self.tipo_alimento}"
+
+class Contacto(models.Model):
+    nombre_propietario = models.CharField(max_length=30)
+    celular_propietario = models.CharField(max_length=80)
+    ubicacion_propietario= models.CharField(max_length=15)
+
+def __str__(self):
+        return f"{self.id} - {self.nombre_propietario}"
     
     
 # Create your models here.
