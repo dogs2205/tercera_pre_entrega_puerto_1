@@ -4,9 +4,9 @@ from Granja.models import Post
 def index(request):
     return render(request, "Granja/index.html")
 
-def mostrar_perro(request):
+def mostrar_animal(request):
     posts = Post.objects.all()
-    return render(request, "Granja/vista_perro.html", {"posts":posts})
+    return render(request, "Granja/vista_animal.html", {"posts":posts})
 
 def mostrar_vaca(request):
     return render(request, "Granja/vista_vaca.html")
