@@ -1,10 +1,12 @@
 from django.shortcuts import render
+from Granja.models import Post
 
 def index(request):
     return render(request, "Granja/index.html")
 
 def mostrar_perro(request):
-    return render(request, "Granja/vista_perro.html")
+    posts = Post.objects.all()
+    return render(request, "Granja/vista_perro.html", {"posts":posts})
 
 def mostrar_vaca(request):
     return render(request, "Granja/vista_vaca.html")
