@@ -15,14 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Granja.views import index,mostrar_animal, mostrar_alimento,mostrar_contacto, mostrar_oveja
+from Granja.views import index, mostrar_alimento,mostrar_contacto, mostrar_oveja, v_animal
 
 urlpatterns = [
     path('', index, name="index"),
     path('admin/', admin.site.urls),
-    path('animal/', mostrar_animal, name="animal"),
+    #path('animal/', mostrar_animal, name="animal"),
     path('alimento/', mostrar_alimento, name="alimento"),
     path('contacto/', mostrar_contacto, name="contacto"),
     path('oveja/', mostrar_oveja, name="oveja"),
+    path('animal/',v_animal, name="animal"),
+    
     
 ]

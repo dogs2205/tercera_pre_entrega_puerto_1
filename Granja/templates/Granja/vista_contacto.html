@@ -3,5 +3,15 @@
 {% load static %} 
 
 {% block main %} 
-<h1> Hola esto es un template</h1>
+ 
+<h1> Admin post</h1>
+<form action="" method="post">
+    {{form}}
+    <input type ="submit" value="Agregar">
+</form>
+<ul>
+    {% for con in contacto%} 
+    <li>{{con.id}}-{{con.nombre_propietario}} </li>
+    {% endfor %} 
+</ul>
 {% endblock %}

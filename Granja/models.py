@@ -20,7 +20,7 @@ def __str__(self):
 class Contacto(models.Model):
     nombre_propietario = models.CharField(max_length=30)
     celular_propietario = models.CharField(max_length=80)
-    ubicacion_propietario= models.CharField(max_length=15)
+    ubicacion_propietario= models.CharField(max_length=30)
 
 def __str__(self):
         return f"{self.id} - {self.nombre_propietario}"
