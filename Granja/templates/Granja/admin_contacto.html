@@ -4,7 +4,7 @@
 
 {% block main %} 
 <h1> Admin post</h1>
-<form action="{% url 'agregar_post' %}" method="post">
+<form action="{% url 'agregar_contacto' %}" method="post">
     {% csrf_token %}
     {{form.as_p}}
     <input type ="submit" value="Agregar">
