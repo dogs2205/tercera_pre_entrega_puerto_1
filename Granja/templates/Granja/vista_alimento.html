@@ -1,0 +1,16 @@
+{%extends "Granja/base.html" %} 
+
+{% load static %} 
+
+{% block main %} 
+<h1> Admin post</h1>
+<form action="" method="post">
+    {{form}}
+    <input type ="submit" value="Agregar">
+</form>
+<ul>
+    {% for alimen in alimento%} 
+    <li>{{alimen.id}}-{{alimen.origen_alimento}} </li>
+    {% endfor %} 
+</ul>
+{% endblock %}

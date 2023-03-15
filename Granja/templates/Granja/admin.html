@@ -1,0 +1,17 @@
+{%extends "Granja/base.html" %} 
+
+{% load static %} 
+
+{% block main %} 
+<h1> Admin post</h1>
+<form action="{% url 'agregar_post' %}" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type ="submit" value="Agregar">
+</form>
+<ul>
+    {% for post in posts%} 
+    <li>{{post.id}}-{{post.tipo_animal}}-{{post.pre_diagnostico}} </li>
+    {% endfor %} 
+</ul>
+{% endblock %}
